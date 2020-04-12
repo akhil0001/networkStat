@@ -36,7 +36,7 @@ let isOnline;
 checkTCP()
     .then(() => (isOnline = true))
     .catch(() => (isOnline = false))
-    .finally(() => console.log(`Connected to Internet: ${isOnline ? FgGreen : FgRed}`, `${isOnline}`));
+    .then(() => console.log(`Connected to Internet: ${isOnline ? FgGreen : FgRed}`, `${isOnline}`));
 
 let requiredAddr = [];
 
